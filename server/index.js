@@ -1,4 +1,5 @@
 import express from 'express'
+import videosRouter from "./routes/videos.js"
 
 //dotenv
 //Router
@@ -11,7 +12,8 @@ const app = express();
     res.send("Welcome to Brainflix API")
  })
 
-
+//Middleware
+app.use("/api", videosRouter)
 
 
 
